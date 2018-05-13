@@ -5099,7 +5099,7 @@ performance-now@^2.1.0:
 
 photon@m-kutnik/photon:
   version "0.1.0"
-  resolved "git+ssh://git@github.com/m-kutnik/photon.git#f4930ddd2183bb8bf0ae0d56225626144e9d9781"
+  resolved "git+ssh://git@github.com/m-kutnik/photon.git#054f033569588ed9bd62809a54f86c10b2205879"
   dependencies:
     bulma "^0.7.1"
 
