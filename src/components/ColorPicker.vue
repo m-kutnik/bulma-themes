@@ -24,6 +24,11 @@ export default {
       type: String,
       required: true,
     },
+    index: {
+      default: "",
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
