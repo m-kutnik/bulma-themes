@@ -7,7 +7,9 @@
     <div 
       v-show="isActive" 
       class="picker-chrome">
-      <div @click="openPicker" class="picker-close"><i class="fas fa-times is-size-5"/></div>
+      <div 
+        class="picker-close" 
+        @click="openPicker"><i class="fas fa-times is-size-5"/></div>
       <chrome-picker v-model="colors"/>
     </div>
     <span class="subtitle">{{ colors.hex }}</span>
@@ -30,7 +32,7 @@ export default {
     }
   },
   mounted() {
-    this.colors = { "hex": this.color}
+    this.colors = { hex: this.color }
   },
   methods: {
     openPicker() {
@@ -38,7 +40,7 @@ export default {
     },
     updateValue(data) {
       console.log(data)
-    }
+    },
   },
 }
 </script>
