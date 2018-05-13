@@ -13,7 +13,9 @@
           <h3 class="title is-capitalized">{{ index }} color</h3>
         </div>
         <div class="column has-text-left-desktop">
-          <color-picker :color="color" :index="index"/>
+          <color-picker 
+            :color="color" 
+            :index="index"/>
         </div>
       </div>
     </div>
@@ -22,6 +24,9 @@
 
 <script>
 export default {
+  data() {
+    return {}
+  },
   created() {
     this.colors = this.$store.state.themeGenerator.colors
   },
@@ -29,11 +34,6 @@ export default {
     changeColor(val) {
       this.$store.commit("color", val)
     },
-  },
-  data() {
-    return {
-
-    }
   },
 }
 </script>

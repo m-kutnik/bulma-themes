@@ -10,13 +10,15 @@
       <div 
         class="picker-close" 
         @click="openPicker"><i class="fas fa-times is-size-5"/></div>
-      <chrome-picker v-model="colors"/>
+      <chrome-picker :value="colors" @input="updateValue"/>
     </div>
     <span class="subtitle">{{ colors.hex }}</span>
   </div>
 </template>
 
 <script>
+import debounce from "lodash.debounce"
+
 export default {
   props: {
     color: {
@@ -38,14 +40,19 @@ export default {
   },
   mounted() {
     this.colors = { hex: this.color }
+    this.colorIndex = this.index
   },
   methods: {
     openPicker() {
       this.isActive = !this.isActive
     },
-    updateValue(data) {
-      console.log(data)
+    updateValue(color) {
+      this.colors.hex = color.hex
+      this.dispatchMutation(this.index, this.colors.hex, this.$store)
     },
+    dispatchMutation: debounce((index, color, store) => {
+      store.dispatch("SET_COLOR", { index: index, color: color })
+    }, 500)
   },
 }
 </script>

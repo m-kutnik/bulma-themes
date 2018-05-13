@@ -13,9 +13,19 @@ export default {
     },
   },
   mutations: {
-    theme(state, theme) {
-      state.theme = theme
+    SET_THEME(state, value) {
+      state.theme = value
+    },
+    SET_COLOR(state, value) {
+      state.colors[value.index] = value.color
     },
   },
-  actions: {},
+  actions: {
+    SET_THEME({ commit }, theme) {
+      commit("SET_THEME", theme)
+    },
+    SET_COLOR({ commit }, obj) {
+      commit("SET_COLOR", obj)
+    },
+  },
 }
