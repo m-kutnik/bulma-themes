@@ -10,7 +10,7 @@
           :key="index"
           :class="{'is-active': tab.isActive}"
         >
-          <a @click="selectTab(tab)">
+          <a @click="selectTab(tab, index)">
             <span 
               v-if="tab.icon"
               class="icon is-small"
@@ -26,6 +26,16 @@
     </div>
     <div class="tabs-content">
       <slot/>
+      <br>
+      <a 
+        v-show="!last" 
+        class="button is-primary is-medium" 
+        @click="nextTab()">
+        <span>Next</span>
+        <span class="icon">
+          <i class="fas fa-arrow-circle-right"/>
+        </span>
+      </a>
     </div>
   </div>
 </template>
@@ -35,21 +45,41 @@ export default {
   data() {
     return {
       childrens: [],
+      index: 0,
     }
   },
   computed: {
     tabs() {
       return this.childrens.slice(1)
     },
+    last() {
+      return this.index == this.tabs.length - 1
+    },
+    simplebarNode() {
+      return this.$el.parentElement.parentElement
+    },
   },
   created() {
     this.childrens = this.$children
   },
   methods: {
-    selectTab(selectedTab) {
+    selectTab(selectedTab, index) {
       this.tabs.forEach(tab => {
         tab.isActive = tab.name == selectedTab.name
       })
+      this.index = index
+      this.scrolltoTop()
+    },
+    nextTab() {
+      this.tabs.forEach(tab => (tab.isActive = false))
+      this.tabs[this.index + 1].isActive = true
+      this.index++
+      this.scrolltoTop()
+    },
+    scrolltoTop() {
+      window.scrollTo(0, 0)
+      this.simplebarNode.scrollTop = 0
+      this.$forceUpdate()
     },
   },
 }
@@ -57,7 +87,7 @@ export default {
 
 <style lang="scss" scoped>
 .tabs {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   background: rgb(29, 29, 29);
@@ -66,6 +96,6 @@ export default {
 }
 
 .tabs-content {
-  margin-top: 5rem;
+  padding: 5rem 0 10rem;
 }
 </style>
