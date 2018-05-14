@@ -27,8 +27,10 @@ export default {
   data() {
     return {}
   },
-  created() {
-    this.colors = this.$store.state.themeGenerator.colors
+  computed: {
+    colors() {
+      return this.$store.state.themeGenerator.colors
+    },
   },
   methods: {
     changeColor(val) {

@@ -2,7 +2,7 @@
   <div>
     <h1 class="title">Theme Color</h1>
     <h2 class="subtitle">Select main theme color</h2>
-    <section class="container has-text-centered">
+    <section class="generator-container">
       <div 
         class="input-group light" 
         @click="changeTheme('light')">
@@ -42,14 +42,15 @@ export default {
   },
   methods: {
     changeTheme(val) {
-      this.$store.commit("theme", val)
+      const dispatch = this.$store.dispatch
+      dispatch("SET_THEME", val)
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
+.generator-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
