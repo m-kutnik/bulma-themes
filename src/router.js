@@ -1,9 +1,9 @@
 import Vue from "vue"
 import Router from "vue-router"
-import Home from "./views/Home"
-import About from "./views/About"
-import Presets from "./views/Presets"
-import ThemeGenerator from "./views/Generator"
+const Home = () => import("./views/Home.vue")
+const About = () => import("./views/About.vue")
+const Presets = () => import("./views/Presets.vue")
+const ThemeGenerator = () => import("./views/Generator.vue")
 
 Vue.use(Router)
 
