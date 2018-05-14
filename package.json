@@ -11,6 +11,7 @@
     "lodash.debounce": "^4.0.8",
     "photon": "m-kutnik/photon",
     "register-service-worker": "^1.0.0",
+    "simplebar": "^2.6.1",
     "vue": "^2.5.16",
     "vue-color": "^2.4.6",
     "vue-router": "^3.0.1",
