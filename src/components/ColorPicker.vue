@@ -1,7 +1,7 @@
 <template>
   <div class="picker">
     <div
-      :style="{ background: colors.hex }"
+      :style="{ background: hex }"
       class="picker-color" 
       @click="openPicker"/>
     <div 
@@ -10,9 +10,11 @@
       <div 
         class="picker-close" 
         @click="openPicker"><i class="fas fa-times is-size-5"/></div>
-      <chrome-picker :value="colors" @input="updateValue"/>
+      <chrome-picker 
+        :value="hex" 
+        @input="updateValue"/>
     </div>
-    <span class="subtitle">{{ colors.hex }}</span>
+    <span class="subtitle">{{ hex }}</span>
   </div>
 </template>
 
@@ -35,11 +37,16 @@ export default {
   data() {
     return {
       isActive: false,
-      colors: {},
+      hex: "#333",
     }
   },
+  watch: {
+    color(newVal) {
+      this.hex = newVal
+    },
+  },
   mounted() {
-    this.colors = { hex: this.color }
+    this.hex = this.color
     this.colorIndex = this.index
   },
   methods: {
@@ -47,12 +54,12 @@ export default {
       this.isActive = !this.isActive
     },
     updateValue(color) {
-      this.colors.hex = color.hex
-      this.dispatchMutation(this.index, this.colors.hex, this.$store)
+      this.colors = color.hex
+      this.dispatchMutation(this.index, this.colors, this.$store)
     },
     dispatchMutation: debounce((index, color, store) => {
       store.dispatch("SET_COLOR", { index: index, color: color })
-    }, 500)
+    }, 100),
   },
 }
 </script>
@@ -70,6 +77,7 @@ export default {
   width: 2.5rem;
   margin: 10px 0;
   border-radius: 100000px;
+  border: 2px solid #9e9e9e;
   cursor: pointer;
 }
 
