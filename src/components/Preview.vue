@@ -157,7 +157,7 @@
               :style="primaryColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
           <div class="column is-half">
@@ -165,7 +165,7 @@
               :style="linkColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
           <div class="column is-half">
@@ -173,7 +173,7 @@
               :style="infoColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
           <div class="column is-half">
@@ -181,7 +181,7 @@
               :style="successColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
           <div class="column is-half">
@@ -189,7 +189,7 @@
               :style="warningColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
           <div class="column is-half">
@@ -197,7 +197,7 @@
               :style="dangerColorStyle" 
               class="notification">
               <button class="delete"/> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
           </div>
           
         </div>
