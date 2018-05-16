@@ -33,6 +33,11 @@ export default {
       type: String,
       required: true,
     },
+    type: {
+      default: "",
+      type: String,
+      required: true,
+    },
   },
   data() {
     return {
@@ -55,10 +60,11 @@ export default {
     },
     updateValue(color) {
       this.colors = color.hex
-      this.dispatchMutation(this.index, this.colors, this.$store)
+      this.dispatchMutation(this.type, this.index, this.colors, this)
     },
-    dispatchMutation: debounce((index, color, store) => {
-      store.dispatch("SET_COLOR", { index: index, color: color })
+    dispatchMutation: debounce((type, index, color, that) => {
+      that.$emit("update:event", that.colors)
+      that.$store.dispatch("SET_COLOR", { type: type, index: index, color: color })
     }, 100),
   },
 }

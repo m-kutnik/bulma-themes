@@ -40,7 +40,7 @@ export default {
       danger: "#FF3860",
     },
     shades: JSON.parse(JSON.stringify(shades.light)),
-    customColors: [],
+    customColors: {},
     appearance: {
       borderRadius: 3,
     },
@@ -50,7 +50,7 @@ export default {
       state.theme = value
     },
     SET_COLOR(state, value) {
-      state.colors[value.index] = value.color
+      state[value.type][value.index] = value.color
     },
     SET_SHADE(state, value) {
       state.shades = JSON.parse(JSON.stringify(shades[value]))
@@ -61,6 +61,7 @@ export default {
       commit("SET_THEME", theme)
       dispatch("SET_SHADE", theme)
       dispatch("SET_COLOR", {
+        type: "colors",
         index: "background",
         color: shades[theme]["white-bis"],
       })

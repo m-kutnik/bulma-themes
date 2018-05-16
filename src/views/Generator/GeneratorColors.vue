@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">Colors</h1>
-    <h2 class="subtitle">Create your color palette</h2>
+    <h2 class="subtitle">Modify default colors</h2>
     <br><br><br>
     <div 
       v-for="(color, index) in colors"
@@ -15,7 +15,8 @@
         <div class="column has-text-left-desktop">
           <color-picker 
             :color="color" 
-            :index="index"/>
+            :index="index"
+            :type="type"/>
         </div>
       </div>
     </div>
@@ -25,16 +26,13 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      type: "colors"
+    }
   },
   computed: {
     colors() {
       return this.$store.state.themeGenerator.colors
-    },
-  },
-  methods: {
-    changeColor(val) {
-      this.$store.commit("color", val)
     },
   },
 }

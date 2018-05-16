@@ -18,7 +18,7 @@
         <tab 
           name="Custom Colors" 
           icon="fas fa-paint-brush">
-          <generator-colors/>
+          <generator-custom-colors/>
         </tab>
         <tab 
           name="Appearance" 
@@ -53,12 +53,14 @@
 </template>
 
 <script>
+import GeneratorCustomColors from "./Generator/GeneratorCustomColors"
 import GeneratorThemeColor from "./Generator/GeneratorThemeColor"
 import GeneratorColors from "./Generator/GeneratorColors"
 
 export default {
   name: "Generator",
   components: {
+    GeneratorCustomColors,
     GeneratorThemeColor,
     GeneratorColors,
   },
