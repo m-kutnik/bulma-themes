@@ -27,7 +27,7 @@
 export default {
   data() {
     return {
-      type: "colors"
+      type: "colors",
     }
   },
   computed: {

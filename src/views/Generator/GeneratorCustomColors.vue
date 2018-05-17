@@ -7,10 +7,17 @@
     <div class="color-add has-text-centered">
       <div class="field has-addons">
         <div class="control is-expanded">
-          <input v-model="name" class="input" type="text" placeholder="Color name">
+          <input 
+            v-model="name" 
+            class="input" 
+            type="text" 
+            placeholder="Color name">
         </div>
         <div class="control">
-          <button type="submit" class="button is-primary" @click="pushCustomColor()">Add</button>
+          <button 
+            type="submit" 
+            class="button is-primary" 
+            @click="pushCustomColor()">Add</button>
         </div>
       </div>
     </div>
@@ -42,7 +49,7 @@ export default {
     return {
       name: "",
       type: "customColors",
-      event: ""
+      event: "",
     }
   },
   computed: {
@@ -56,7 +63,11 @@ export default {
     },
     pushCustomColor() {
       if (!this.name) return
-      this.$store.dispatch("SET_COLOR", { type: "customColors", index: this.name.toLowerCase(), color: "#333" })
+      this.$store.dispatch("SET_COLOR", {
+        type: "customColors",
+        index: this.name.toLowerCase(),
+        color: "#333",
+      })
       this.name = ""
     },
   },

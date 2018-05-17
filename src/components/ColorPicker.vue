@@ -64,7 +64,11 @@ export default {
     },
     dispatchMutation: debounce((type, index, color, that) => {
       that.$emit("update:event", that.colors)
-      that.$store.dispatch("SET_COLOR", { type: type, index: index, color: color })
+      that.$store.dispatch("SET_COLOR", {
+        type: type,
+        index: index,
+        color: color,
+      })
     }, 100),
   },
 }
