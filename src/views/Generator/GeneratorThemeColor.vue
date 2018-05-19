@@ -42,8 +42,7 @@ export default {
   },
   methods: {
     changeTheme(val) {
-      const dispatch = this.$store.dispatch
-      dispatch("SET_THEME", val)
+      this.$store.dispatch("SET_THEME", val)
     },
   },
 }
