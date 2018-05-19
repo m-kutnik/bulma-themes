@@ -23,12 +23,12 @@
         <tab 
           name="Appearance" 
           icon="fas fa-ruler-combined">
-          <generator-colors/>
+          <generator-appearance/>
         </tab>
         <tab 
           name="Advanced" 
           icon="fas fa-cogs">
-          <generator-colors/>
+          <generator-advanced/>
         </tab>
         <tab 
           name="Save/Export" 
@@ -54,14 +54,18 @@
 
 <script>
 import GeneratorCustomColors from "./Generator/GeneratorCustomColors"
+import GeneratorAppearance from "./Generator/GeneratorAppearance"
 import GeneratorThemeColor from "./Generator/GeneratorThemeColor"
+import GeneratorAdvanced from './Generator/GeneratorAdvanced'
 import GeneratorColors from "./Generator/GeneratorColors"
 
 export default {
   name: "Generator",
   components: {
     GeneratorCustomColors,
+    GeneratorAppearance,
     GeneratorThemeColor,
+    GeneratorAdvanced,
     GeneratorColors,
   },
   data() {
