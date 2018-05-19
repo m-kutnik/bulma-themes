@@ -55,6 +55,9 @@ export default {
     SET_SHADE(state, value) {
       state.shades = JSON.parse(JSON.stringify(shades[value]))
     },
+    SET_RADIUS(state, value) {
+      state.appearance.borderRadius = value
+    },
   },
   actions: {
     SET_THEME({ commit, dispatch }, theme) {
@@ -71,6 +74,9 @@ export default {
     },
     SET_SHADE({ commit }, theme) {
       commit("SET_SHADE", theme)
+    },
+    SET_RADIUS({ commit }, value) {
+      commit("SET_RADIUS", value)
     },
   },
 }
