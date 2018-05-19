@@ -255,40 +255,49 @@ export default {
     textDarkStyle() {
       return { color: this.theme.shades["grey-dark"] }
     },
+    borderRadius() {
+      return { borderRadius: `${this.theme.appearance.borderRadius}px` }
+    },
     primaryColorStyle() {
       return {
         background: this.theme.colors.primary,
         color: invert(this.theme.colors.primary),
+        ...this.borderRadius,
       }
     },
     linkColorStyle() {
       return {
         background: this.theme.colors.link,
         color: invert(this.theme.colors.link),
+        ...this.borderRadius,
       }
     },
     infoColorStyle() {
       return {
         background: this.theme.colors.info,
         color: invert(this.theme.colors.info),
+        ...this.borderRadius,
       }
     },
     successColorStyle() {
       return {
         background: this.theme.colors.success,
         color: invert(this.theme.colors.success),
+        ...this.borderRadius,
       }
     },
     warningColorStyle() {
       return {
         background: this.theme.colors.warning,
         color: invert(this.theme.colors.warning),
+        ...this.borderRadius,
       }
     },
     dangerColorStyle() {
       return {
         background: this.theme.colors.danger,
         color: invert(this.theme.colors.danger),
+        ...this.borderRadius,
       }
     },
   },
