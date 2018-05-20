@@ -2,6 +2,7 @@
   <div>
     <h1 class="title">Appearance</h1>
     <h2 class="subtitle">Select main theme color</h2>
+    <br><br><br>
     <div class="column has-text-centered color">
       <div class="columns">
         <div class="column">
@@ -24,7 +25,6 @@ export default {
   },
   methods: {
     changeBorderRadius(e) {
-      console.log(e.target.value)
       this.$store.dispatch("SET_RADIUS", e.target.value)
     },
   },
