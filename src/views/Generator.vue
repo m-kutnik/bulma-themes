@@ -33,7 +33,7 @@
         <tab 
           name="Save/Export" 
           icon="fas fa-save">
-          Test content
+          <generator-export/>
         </tab>
       </tabs>
     </div>
@@ -57,6 +57,7 @@ import GeneratorCustomColors from "./Generator/GeneratorCustomColors"
 import GeneratorAppearance from "./Generator/GeneratorAppearance"
 import GeneratorThemeColor from "./Generator/GeneratorThemeColor"
 import GeneratorAdvanced from './Generator/GeneratorAdvanced'
+import GeneratorExport from "./Generator/GeneratorExport"
 import GeneratorColors from "./Generator/GeneratorColors"
 
 export default {
@@ -66,6 +67,7 @@ export default {
     GeneratorAppearance,
     GeneratorThemeColor,
     GeneratorAdvanced,
+    GeneratorExport,
     GeneratorColors,
   },
   data() {
