@@ -39,10 +39,14 @@ export default {
       warning: "#FFDD57",
       danger: "#FF3860",
     },
-    shades: JSON.parse(JSON.stringify(shades.light)),
     customColors: {},
+    shades: JSON.parse(JSON.stringify(shades.light)),
     appearance: {
       borderRadius: 3,
+    },
+    adv: {
+      fontFamily: "",
+      customCSS: "",
     },
   },
   mutations: {
@@ -57,6 +61,12 @@ export default {
     },
     SET_RADIUS(state, value) {
       state.appearance.borderRadius = value
+    },
+    SET_FONTFAMILY(state, value) {
+      state.adv.fontFamily = value
+    },
+    SET_CUSTOMCSS(state, value) {
+      state.adv.customCSS = value
     },
   },
   actions: {
@@ -77,6 +87,12 @@ export default {
     },
     SET_RADIUS({ commit }, value) {
       commit("SET_RADIUS", value)
+    },
+    SET_FONTFAMILY({ commit }, value) {
+      commit("SET_FONTFAMILY", value)
+    },
+    SET_CUSTOMCSS({ commit }, value) {
+      commit("SET_CUSTOMCSS", value)
     },
   },
 }
