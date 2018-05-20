@@ -61,22 +61,22 @@
             <div>
               <a 
                 :style="primaryColorStyle" 
-                class="button is-round"> Primary </a>
+                class="button is-rounded"> Primary </a>
               <a 
                 :style="linkColorStyle" 
-                class="button is-round"> Link </a>
+                class="button is-rounded"> Link </a>
               <a 
                 :style="infoColorStyle" 
-                class="button is-round"> Info </a>
+                class="button is-rounded"> Info </a>
               <a 
                 :style="successColorStyle" 
-                class="button is-round"> Success </a>
+                class="button is-rounded"> Success </a>
               <a 
                 :style="warningColorStyle" 
-                class="button is-round"> Warning </a>
+                class="button is-rounded"> Warning </a>
               <a 
                 :style="dangerColorStyle" 
-                class="button is-round"> Danger </a>
+                class="button is-rounded"> Danger </a>
             </div>
           </div>
         </div>
@@ -317,5 +317,9 @@ export default {
 
 .column div {
   margin-bottom: 10px;
+}
+
+.is-rounded {
+  border-radius: 290486px !important;
 }
 </style>
