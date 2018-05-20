@@ -9,7 +9,14 @@
           <h3 class="title is-capitalized">Font Family</h3>
         </div>
         <div class="column has-text-left-desktop">
-          <input type="text" class="input" name="font" id="font" placeholder="Your Font Family" :value="fontFamily" @input="changeFontFamily">
+          <input 
+            id="font" 
+            :value="fontFamily" 
+            type="text" 
+            class="input" 
+            name="font" 
+            placeholder="Your Font Family" 
+            @input="changeFontFamily">
         </div>
       </div>
     </div>
@@ -19,7 +26,11 @@
           <h3 class="title is-capitalized">Custom CSS</h3>
         </div>
         <div class="column has-text-left-desktop">
-          <textarea class="textarea" placeholder="Your CSS" :value="customCSS" @input="changeCustomCSS"/>
+          <textarea 
+            :value="customCSS" 
+            class="textarea" 
+            placeholder="Your CSS" 
+            @input="changeCustomCSS"/>
         </div>
       </div>
     </div>
@@ -36,7 +47,7 @@ export default {
     },
     customCSS() {
       return this.$store.state.themeGenerator.adv.customCSS
-    }
+    },
   },
   methods: {
     changeFontFamily(e) {

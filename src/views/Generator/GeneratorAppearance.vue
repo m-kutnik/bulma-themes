@@ -9,7 +9,13 @@
           <h3 class="title is-capitalized">Border Radius</h3>
         </div>
         <div class="column has-text-left-desktop">
-          <input type="number" class="input" name="radius" id="radius" :value="borderRadius" @input="changeBorderRadius">
+          <input 
+            id="radius" 
+            :value="borderRadius" 
+            type="number" 
+            class="input" 
+            name="radius" 
+            @input="changeBorderRadius">
         </div>
       </div>
     </div>
@@ -21,7 +27,7 @@ export default {
   computed: {
     borderRadius() {
       return this.$store.state.themeGenerator.appearance.borderRadius
-    }
+    },
   },
   methods: {
     changeBorderRadius(e) {
@@ -31,5 +37,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 </style>

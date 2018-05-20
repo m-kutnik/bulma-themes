@@ -56,7 +56,7 @@
 import GeneratorCustomColors from "./Generator/GeneratorCustomColors"
 import GeneratorAppearance from "./Generator/GeneratorAppearance"
 import GeneratorThemeColor from "./Generator/GeneratorThemeColor"
-import GeneratorAdvanced from './Generator/GeneratorAdvanced'
+import GeneratorAdvanced from "./Generator/GeneratorAdvanced"
 import GeneratorExport from "./Generator/GeneratorExport"
 import GeneratorColors from "./Generator/GeneratorColors"
 
