@@ -12,8 +12,10 @@
               BTG
             </span>
             <span 
-              class="navbar-burger burger" 
+              :class="{ 'is-active': showMenu}" 
+              class="navbar-burger burger"
               data-target="navbarMenuHero"
+              @click="toggleMenu"
             >
               <span aria-hidden="true"/>
               <span aria-hidden="true"/>
@@ -22,6 +24,7 @@
           </div>
           <div 
             id="navbarMenuHero" 
+            :class="{ 'is-active': showMenu}"
             class="navbar-menu"
           >
             <div class="navbar-end">
@@ -34,7 +37,9 @@
                 class="navbar-item"
               > About </router-link>
               <span class="navbar-item">
-                <a class="button is-primary is-inverted is-outlined is-round">
+                <a 
+                  href="https://github.com/m-kutnik/bulma-themes" 
+                  class="button is-secondary is-inverted is-outlined is-round">
                   <span class="icon">
                     <i class="fab fa-github"/>
                   </span>
@@ -103,6 +108,16 @@
 
 export default {
   name: "Home",
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
