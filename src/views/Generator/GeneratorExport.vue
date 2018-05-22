@@ -42,15 +42,20 @@ export default {
       event.target.disabled = true
       event.target.classList.add("is-loading")
 
-      window.fetch("https://us-central1-bulmagenerator.cloudfunctions.net/generate", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: this.theme,
-      }).then((res) => res.text())
-        .then((data) => this.download('style.css', data))
+      window
+        .fetch(
+          "https://us-central1-bulmagenerator.cloudfunctions.net/generate",
+          {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: this.theme,
+          },
+        )
+        .then(res => res.text())
+        .then(data => this.download("style.css", data))
         .then(() => {
           event.target.disabled = false
           event.target.classList.remove("is-loading")
