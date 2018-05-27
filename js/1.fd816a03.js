@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[1],{iixK:function(e,s,t){"use strict";t.r(s);var n=function(){var e=this,s=e.$createElement;e._self._c;return e._m(0)},r=[function(){var e=this,s=e.$createElement,t=e._self._c||s;return t("div",{staticClass:"presets"},[t("h1",[e._v("This is an presets page")])])}],a=(t("VRzm"),{name:"Presets"}),i=a,c=t("KHd+"),l=Object(c["a"])(i,n,r,!1,null,null,null);s["default"]=l.exports}}]);
+//# sourceMappingURL=1.fd816a03.js.map
