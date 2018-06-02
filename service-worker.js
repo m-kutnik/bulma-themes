@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "./precache-manifest.1028dcf6921b5eb444b95ff9459c9c64.js"
+  "./precache-manifest.f9b5e91811df89d572bae402667b6bad.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "bulma-themes"});
