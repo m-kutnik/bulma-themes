@@ -39,7 +39,7 @@
               <span class="navbar-item">
                 <a 
                   href="https://github.com/m-kutnik/bulma-themes" 
-                  class="button is-secondary is-inverted is-outlined is-round">
+                  class="button is-secondary is-inverted is-outlined is-rounded">
                   <span class="icon">
                     <i class="fab fa-github"/>
                   </span>
@@ -62,7 +62,7 @@
               <div class="column-bottom">
                 <router-link 
                   to="/generator"
-                  class="button is-secondary is-inverted is-outlined is-medium is-round"
+                  class="button is-secondary is-inverted is-outlined is-medium is-rounded"
                 >
                   <span class="icon">
                     <i class="fas fa-plus-circle"/>
@@ -77,7 +77,7 @@
               <div class="column-bottom">
                 <router-link 
                   to="/presets"
-                  class="button is-primary is-medium is-round"
+                  class="button is-primary is-medium is-rounded"
                 >
                   <span class="icon">
                     <i class="fas fa-palette"/>
